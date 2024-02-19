@@ -6,8 +6,8 @@ public class Message extends Media{
 
 	private String text;
 
-	public Message(String nameOfAuthor, long time, int likes, ArrayList<String> comments, String text) {
-		super(nameOfAuthor, time, likes, comments);
+	public Message(String nameOfAuthor, long time, int likes, ArrayList<String> comments, String text,int likesOfComments, ArrayList<String> hashtag) {
+		super(nameOfAuthor, time, likes, comments,likesOfComments,hashtag);
 		this.text = text;
 	}
 	

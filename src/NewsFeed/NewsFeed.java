@@ -48,4 +48,14 @@ public class NewsFeed {
 		}
 	}
 	
+	public ArrayList<Media> postWithHashtag(ArrayList<String> hashtag) {
+		ArrayList<Media> tmp = new ArrayList<Media>();
+		for(Media m : newsFeed) {
+			if(m.getHashtag().equals(hashtag)) {
+				tmp.add(m);
+			}
+		}
+		return tmp;
+	}
+	
 }

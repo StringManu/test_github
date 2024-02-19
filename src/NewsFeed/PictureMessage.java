@@ -8,8 +8,8 @@ public class PictureMessage extends Media{
 	private String dataName;
 	
 	public PictureMessage(String nameOfAuthor, long time, int likes, ArrayList<String> comments, String headline,
-			String dataName) {
-		super(nameOfAuthor, time, likes, comments);
+			String dataName,int likesOfComments, ArrayList<String> hashtag) {
+		super(nameOfAuthor, time, likes, comments,likesOfComments,hashtag);
 		this.headline = headline;
 		this.dataName = dataName;
 	}
