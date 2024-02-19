@@ -48,13 +48,17 @@ public class NewsFeed {
 		}
 	}
 	
-	public ArrayList<Media> postWithHashtag(ArrayList<String> hashtag) {
+	public ArrayList<Media> postWithHashtag(String hashtag) {
 		ArrayList<Media> tmp = new ArrayList<Media>();
 		for(Media m : newsFeed) {
-			if(m.getHashtag().equals(hashtag)) {
+			int i = 0;
+			String tmp2 = m.getHashtag().get(i);
+			if(tmp2.equalsIgnoreCase(hashtag)) {
 				tmp.add(m);
+				System.out.println(m);
 			}
-		}
+			i++;
+			}
 		return tmp;
 	}
 	
