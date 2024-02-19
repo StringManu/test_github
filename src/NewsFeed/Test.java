@@ -12,11 +12,12 @@ public class Test {
 		hashtags1.add("#unlustig");
 		hashtags1.add("#didntLaugh");
 		Video video1 = new Video("John Doe", 123, 160, comments1, "Funny Cat Compilation", "cat_compilation.mp4", 80, hashtags1);
-
+		
 		NewsFeed n = new NewsFeed();
 		n.addMediaToNewsFeed(video1);
 		n.postWithHashtag("#unlustig");
 		System.out.println(video1.getLikesOfComments());
+		System.out.println(video1.getComments());
 	}
 
 }
