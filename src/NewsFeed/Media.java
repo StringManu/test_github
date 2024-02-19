@@ -25,6 +25,9 @@ public abstract class Media {
 	public int getLikes() {
 		return likes;
 	}
+	public void setLikes(int l) {
+		this.likes = l;
+	}
 	public ArrayList<String> getComments() {
 		return comments;
 	}

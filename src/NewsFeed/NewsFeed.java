@@ -6,8 +6,8 @@ public class NewsFeed {
 
 	private ArrayList<Media> newsFeed;
 
-	public NewsFeed(ArrayList<Media> newsFeed) {
-		this.newsFeed = newsFeed;
+	public NewsFeed() {
+		this.newsFeed = new ArrayList<Media>();
 	}
 
 	public ArrayList<Media> getNewsFeed() {
@@ -22,8 +22,8 @@ public class NewsFeed {
 			newsFeed.add(media);
 	}
 	
-	public void deleteMediaFromNewsFeed(int positionOfPost) {
-		newsFeed.remove(positionOfPost);
+	public void deleteMediaFromNewsFeed(Media m) {
+		newsFeed.remove(m);
 	}
 	
 	public ArrayList<Media> findPostFromUser(String authorName){
