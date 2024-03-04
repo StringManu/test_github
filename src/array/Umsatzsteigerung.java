@@ -19,12 +19,44 @@ public class Umsatzsteigerung {
 		return anzahl;
 	}
 	
-	static String[] tmp = {"hallo","hallo","hallo","hallo"};
+	static String[] tmp2 = {"hallo","hallo","hallo","hallo"};
 	
+	static int[][] magnify(int[][] array, int factor){
+		int z=0;int s=0;int zaehlen=0;int befuellen=1;
+		for(int i=1;i<array.length;i++) {
+			z++;
+			for(int a=0;a<array[0].length;a++) {
+				s++;
+			}
+		}z*=factor;s*=factor;
+		int[][] tmp =new int [z][s];
+		for(int i=0;i<tmp.length;i++) {
+			for(int a=0;a<tmp[0].length;a++) {
+				if(zaehlen<factor+1) {
+					tmp[i][a]=befuellen;
+					zaehlen++;
+				}
+				if(zaehlen==factor) {
+					zaehlen=0;
+				}
+			}
+		}
+		return tmp;
+	}
 	
+	public static void printOutArray(int [] [] array) {
+		int z=0;int s=0;
+		for(z =0;z<array.length;z++) {
+			System.out.println(array[z][s]);
+			for(s=0;s<array[0].length;s++) {
+				System.out.print(array[z][s] + " ");
+			}
+		}
+	}
 	
 	public static void main(String[] args) {
-		System.out.println(count5percent(dailyGains));
+		int [][] idk= {{1,2},{4,5}};
+		printOutArray(magnify(idk,3));
 	}
 	
 }
