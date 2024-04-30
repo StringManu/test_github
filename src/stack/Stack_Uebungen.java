@@ -41,9 +41,29 @@ public class Stack_Uebungen {
 	        return stack.isEmpty();
 	    }
 	
+	public static boolean checkBracketsMusterloesung(String input) {
+		LinkedList<Character> stack = new LinkedList<>();
+		for(char c : input.toCharArray()) {
+			if(c == '(' || c == '{' || c == '[') {
+				stack.push(c);
+			} else if(c == ')' || c == '}' || c == ']') {
+				if(stack.isEmpty()) {
+					return false;
+				}
+				char lastOpen = stack.peek();
+				if((c == ')' && lastOpen != '(') ||
+					(c == '}' && lastOpen != '{') ||
+					(c == ']' && lastOpen != '[')) {
+					return false;
+				}
+				stack.pop();
+			}
+		}
+		return stack.isEmpty();
+	}
+	
 	public static double evaluateUPN(String input) {
-		
-		return
+		return 0;
 	}
 	
 	public static void main(String[] args) {
@@ -55,7 +75,6 @@ public class Stack_Uebungen {
 		  String input2 = "12345";
 		  String reversed2 = reverseString(input2);
 		  System.out.println(reversed2); 
-		  **/
 		Scanner scanner = new Scanner(System.in);
         System.out.print("Bitte gib deinen Satz ein: ");
         String input = scanner.nextLine();
@@ -64,6 +83,9 @@ public class Stack_Uebungen {
         } else {
             System.out.println("Fehlerhafte Klammerung!");
         }
+        **/
+		String str = "(()))";
+		System.out.println(checkBracketsMusterloesung(str));
 	}
 
 }
